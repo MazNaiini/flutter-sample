@@ -25,8 +25,8 @@ final double cornerRadius;
               child: Image.asset(logoPath, 
                 height: height ?? 150, 
                 width: width ?? 150
-                )
-              ) 
-            );
+              )
+            ) 
+          );
   }
 }

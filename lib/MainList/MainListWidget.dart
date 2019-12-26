@@ -28,7 +28,7 @@ class MainListWidget extends StatelessWidget {
           _presentMoreInfo(context);
         },
         tooltip: 'More Info',
-        child: Icon(Icons.info),
+        child: Icon(Icons.info), 
         backgroundColor: Colors.blueAccent,
       ), 
       backgroundColor: Colors.white,
