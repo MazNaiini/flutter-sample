@@ -41,15 +41,23 @@ class _ListPageState extends State<ListPage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
+              style: Theme.of(context).textTheme.body1,
+              maxLines: 2,
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.title,
             ),
+            Text(
+              'So fun developing with Flutter',
+              style: TextStyle(
+                backgroundColor: Colors.blue 
+                )
+            )
           ],
         ),
       ),
@@ -57,7 +65,9 @@ class _ListPageState extends State<ListPage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.tv),
+        backgroundColor: Colors.brown,
       ), 
+      backgroundColor: Colors.teal,
     );
   }
 }
