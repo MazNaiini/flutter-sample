@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'MoreInfoWidget.dart';
 
 class MainListWidget extends StatefulWidget {
   MainListWidget({Key key, this.title}) : super(key: key);
@@ -9,12 +10,14 @@ class MainListWidget extends StatefulWidget {
 }
 
 class _MainListState extends State<MainListWidget> {
-  int _counter = 10;
 
   void _incrementCounter() {
-    setState(() {
-      _counter = _counter + 5;
-    });
+      Navigator.push(context, MaterialPageRoute<Null>(
+        builder: (BuildContext context) {
+          return MoreInfoWidget();
+        },
+        fullscreenDialog: true
+      ));
   }
 
   @override
@@ -28,13 +31,8 @@ class _MainListState extends State<MainListWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
-              style: Theme.of(context).textTheme.body1,
-              maxLines: 2,
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.title,
+              'The list content will be here',
+              style: Theme.of(context).textTheme.body1
             )
           ],
         ),

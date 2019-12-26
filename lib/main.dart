@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MainListWidget.dart';
+import 'package:flutter_sample/MainListWidgetStateless.dart';
 
 void main() => runApp(SampleApp());
 
@@ -12,7 +12,7 @@ class SampleApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: MainListWidget(title: 'List of items!'),
+      home: MainListWidgetStateLess(title: 'List of items!'),
     );
   }
 }
