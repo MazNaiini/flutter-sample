@@ -1,30 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/MoreInfo/MoreInfoWidget.dart';
 
-class MainListWidget extends StatefulWidget {
+class MainListWidget extends StatelessWidget {
   MainListWidget({Key key, this.title}) : super(key: key);
 
   final String title;
-
-  @override _MainListState createState() => _MainListState();
-}
-
-class _MainListState extends State<MainListWidget> {
-
-  void _incrementCounter() {
-      Navigator.push(context, MaterialPageRoute<Null>(
-        builder: (BuildContext context) {
-          return MoreInfoWidget();
-        },
-        fullscreenDialog: true
-      ));
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(this.title),
       ),
       body: Center(
         child: Column(
@@ -38,7 +24,9 @@ class _MainListState extends State<MainListWidget> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          _presentMoreInfo(context);
+        },
         tooltip: 'More Info',
         child: Icon(Icons.info),
         backgroundColor: Colors.blueAccent,
@@ -46,4 +34,14 @@ class _MainListState extends State<MainListWidget> {
       backgroundColor: Colors.white,
     );
   }
+
+  void _presentMoreInfo(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute<Null>(
+      builder: (BuildContext context) {
+        return MoreInfoWidget();
+      },
+      fullscreenDialog: true
+    ));
+  }
+
 }
