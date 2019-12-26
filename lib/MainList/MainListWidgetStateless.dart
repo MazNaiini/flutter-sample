@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
-import 'MoreInfoWidget.dart';
+import 'package:flutter_sample/MoreInfo/MoreInfoWidget.dart';
 
 class MainListWidgetStateLess extends StatelessWidget {
   MainListWidgetStateLess({Key key, this.title}) : super(key: key);
 
   final String title;
-
-  void _presentMoreInfo(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute<Null>(
-      builder: (BuildContext context) {
-        return MoreInfoWidget();
-      },
-      fullscreenDialog: true
-    ));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,4 +34,14 @@ class MainListWidgetStateLess extends StatelessWidget {
       backgroundColor: Colors.white,
     );
   }
+
+  void _presentMoreInfo(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute<Null>(
+      builder: (BuildContext context) {
+        return MoreInfoWidget();
+      },
+      fullscreenDialog: true
+    ));
+  }
+
 }

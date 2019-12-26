@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sample/MainListWidgetStateless.dart';
+import 'package:flutter_sample/MainList/MainListWidgetStateless.dart';
 
 void main() => runApp(SampleApp());
 

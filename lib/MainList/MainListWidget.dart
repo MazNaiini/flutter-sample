@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MoreInfoWidget.dart';
+import 'package:flutter_sample/MoreInfo/MoreInfoWidget.dart';
 
 class MainListWidget extends StatefulWidget {
   MainListWidget({Key key, this.title}) : super(key: key);

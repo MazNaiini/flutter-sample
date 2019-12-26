@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MoreInfoWidget extends StatelessWidget {
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
