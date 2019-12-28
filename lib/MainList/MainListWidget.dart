@@ -9,26 +9,20 @@ class MainListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(this.title),
-      ),
-      body: _body(context),
-      floatingActionButton: _floatingActionButton(context),
-      backgroundColor: Colors.white,
-    );
+        appBar: AppBar(
+          title: Text(this.title),
+        ),
+        body: _body(context),
+        floatingActionButton: _floatingActionButton(context),
+        backgroundColor: Colors.white);
   }
 
-  Widget _body(BuildContext context)  => Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('The Test list content will be here',
-                style: Theme.of(context).textTheme.body1)
-          ],
-        ),
-      );
+  Widget _body(BuildContext context) => Container(
+    
+  );
 
-  FloatingActionButton _floatingActionButton(BuildContext context) => FloatingActionButton(
+  FloatingActionButton _floatingActionButton(BuildContext context) =>
+      FloatingActionButton(
         onPressed: () {
           _presentMoreInfo(context);
         },
