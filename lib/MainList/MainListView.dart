@@ -44,7 +44,7 @@ class MainListView extends StatelessWidget {
 }
 
 class _SelectableTile extends StatelessWidget {
-  _SelectableTile({Key key, this.onTap, this.title}) : super(key: key);
+  _SelectableTile({Key key, this.title, this.onTap}) : super(key: key);
 
   final Function onTap;
   final String title;
