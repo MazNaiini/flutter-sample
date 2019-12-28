@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/MoreInfo/MoreInfoWidget.dart';
+import 'MainListView.dart';
 
 class MainListWidget extends StatelessWidget {
   MainListWidget({Key key, this.title}) : super(key: key);
@@ -12,14 +13,10 @@ class MainListWidget extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.title),
         ),
-        body: _body(context),
+        body: Container(child: MainListView()),
         floatingActionButton: _floatingActionButton(context),
         backgroundColor: Colors.white);
   }
-
-  Widget _body(BuildContext context) => Container(
-    
-  );
 
   FloatingActionButton _floatingActionButton(BuildContext context) =>
       FloatingActionButton(
