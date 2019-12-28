@@ -12,7 +12,7 @@ class SampleApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: MainListWidget(title: 'List of items!'),
+      home: MainListWidget(title: 'Flutter Demo'),
     );
   }
 }

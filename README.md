@@ -9,6 +9,7 @@ This project includes the features below:
 - Basic layout concepts and stateless widgets
 - Fullscreen navigtion push
 - Static List
+- Building a custom widget
 - List -> Detail from hard coded data
 - List -> Detail from API data
 

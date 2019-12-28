@@ -12,36 +12,38 @@ class MainListWidget extends StatelessWidget {
       appBar: AppBar(
         title: Text(this.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'The list content will be here',
-              style: Theme.of(context).textTheme.body1
-            )
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _presentMoreInfo(context);
-        },
-        tooltip: 'More Info',
-        child: Icon(Icons.info), 
-        backgroundColor: Colors.blueAccent,
-      ), 
+      body: _body(context),
+      floatingActionButton: _floatingActionButton(context),
       backgroundColor: Colors.white,
     );
   }
 
-  void _presentMoreInfo(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute<Null>(
-      builder: (BuildContext context) {
-        return MoreInfoWidget();
-      },
-      fullscreenDialog: true
-    ));
-  }
+  Widget _body(BuildContext context)  => Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('The Test list content will be here',
+                style: Theme.of(context).textTheme.body1)
+          ],
+        ),
+      );
 
+  FloatingActionButton _floatingActionButton(BuildContext context) => FloatingActionButton(
+        onPressed: () {
+          _presentMoreInfo(context);
+        },
+        tooltip: 'More Info',
+        child: Icon(Icons.info),
+        backgroundColor: Colors.blueAccent,
+      );
+
+  void _presentMoreInfo(BuildContext context) {
+    Navigator.push(
+        context,
+        MaterialPageRoute<Null>(
+            builder: (BuildContext context) {
+              return MoreInfoWidget();
+            },
+            fullscreenDialog: true));
+  }
 }
