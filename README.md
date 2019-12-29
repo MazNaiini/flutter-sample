@@ -4,14 +4,13 @@
 
 A new Flutter project to show fundmental functionalities of the Flutter platform.
 
-<img src="Flutter-Demo-App.gif" height="500">
-
 
 ## The features included in this project
 
-This project includes the features below:
+- Full screen presentation (which is a brief introduction about the company). And a List/Detail from hard coded data. The List data is a hardcoded JSON file. And for each item we show a detail view presenting the title and the body.
 
-- List -> Detail from hard coded data
+<img src="Flutter-Demo-App.gif" height="500">
+
 - List -> Detail from API data
 
 - Basic layout concepts and stateless widgets
