@@ -1,6 +1,5 @@
+<img height="100" src="/assets/images/logo.png" height="200">
 # Flutter Sample  - MaNa & Co AB 
-
-<img src="/assets/images/logo.png" height="200">
 
 A new Flutter project to show fundmental functionalities of the Flutter platform.
 
