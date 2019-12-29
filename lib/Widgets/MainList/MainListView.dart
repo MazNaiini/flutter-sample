@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_sample/Widgets/APIJSONList/APIJSONWidget.dart';
+import 'package:flutter_sample/Widgets/LocalJSONList/LocalJSONWidget.dart';
 
 class MainListView extends StatelessWidget {
   @override
@@ -11,11 +13,23 @@ class MainListView extends StatelessWidget {
           _groupHeaderTile('List -> Detail examples'),
           _SelectableTile(
             title: 'List from a localy stored JSON',
-            onTap: () {},
+            onTap: () {
+              _present(
+                  LocalJSONWidget(
+                    title: 'List From A Localy Stored JSON',
+                  ),
+                  context);
+            },
           ),
           _SelectableTile(
-            title: 'List form a api provided JSON',
-            onTap: () {},
+            title: 'List from a network API provided JSON',
+            onTap: () {
+              _present(
+                  APIJSONWidget(
+                    title: 'List From API Provided JSON',
+                  ),
+                  context);
+            },
           ),
           _groupHeaderTile('Some basic layouts'),
           _SelectableTile(
@@ -41,6 +55,16 @@ class MainListView extends StatelessWidget {
         style: TextStyle(fontSize: 20),
       ),
       enabled: false);
+
+  void _present(Widget widget, BuildContext context) {
+    Navigator.push(
+        context,
+        MaterialPageRoute<Null>(
+            builder: (BuildContext context) {
+              return widget;
+            },
+            fullscreenDialog: false));
+  }
 }
 
 class _SelectableTile extends StatelessWidget {
