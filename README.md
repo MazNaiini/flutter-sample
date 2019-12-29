@@ -1,10 +1,7 @@
-# Flutter Sample  <img src="https://github.com/MazNaiini/flutter-sample/blob/master/assets/images/logo.png?raw=true" height="200">
-
+# Flutter Sample  
 MaNa & Co AB 
 ---
-
-
-![alt text][logo]
+<img src="https://github.com/MazNaiini/flutter-sample/blob/master/assets/images/logo.png?raw=true" height="200">
 
 A new Flutter project to show fundmental functionalities of the Flutter platform.
 
