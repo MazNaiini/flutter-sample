@@ -6,12 +6,13 @@ A new Flutter project to show fundmental functionalities of the Flutter platform
 
 This project includes the features below:
 
+- List -> Detail from hard coded data
+- List -> Detail from API data
+
 - Basic layout concepts and stateless widgets
 - Fullscreen navigtion push
 - Static List
 - Building a custom widget
-- List -> Detail from hard coded data
-- List -> Detail from API data
 
 [Contact us](https://www.linkedin.com/in/dr-maz-naiini-96aa072/) for your app development needs at MaNa & Co:
 
