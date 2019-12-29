@@ -45,7 +45,7 @@ class MainListView extends StatelessWidget {
         ),
         _SelectableTile(
           title: 'Responsive',
-          color: Colors.blue,
+          color: Colors.indigoAccent,
           onTap: () {},
         ),
       ],
