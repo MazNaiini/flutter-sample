@@ -7,45 +7,48 @@ class MainListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: ListTile.divideTiles(
-        context: context,
-        tiles: [
-          _groupHeaderTile('List -> Detail examples'),
-          _SelectableTile(
-            title: 'List from a localy stored JSON',
-            onTap: () {
-              _present(
-                  LocalJSONWidget(
-                    title: 'List From A Localy Stored JSON',
-                  ),
-                  context);
-            },
-          ),
-          _SelectableTile(
-            title: 'List from a network API provided JSON',
-            onTap: () {
-              _present(
-                  APIJSONWidget(
-                    title: 'List From API Provided JSON',
-                  ),
-                  context);
-            },
-          ),
-          _groupHeaderTile('Some basic layouts'),
-          _SelectableTile(
-            title: 'Grid View',
-            onTap: () {},
-          ),
-          _SelectableTile(
-            title: 'Stack',
-            onTap: () {},
-          ),
-          _SelectableTile(
-            title: 'Responsive',
-            onTap: () {},
-          ),
-        ],
-      ).toList(),
+      padding: EdgeInsets.only(top: 8),
+      children: [
+        _groupHeaderTile('List / Detail examples'),
+        _SelectableTile(
+          title: 'List from a localy stored JSON',
+          color: Colors.green,
+          onTap: () {
+            _present(
+                LocalJSONWidget(
+                  title: 'List From A Localy Stored JSON',
+                ),
+                context);
+          },
+        ),
+        _SelectableTile(
+          title: 'List from a network API provided JSON',
+          color: Colors.lightBlue,
+          onTap: () {
+            _present(
+                APIJSONWidget(
+                  title: 'List From API Provided JSON',
+                ),
+                context);
+          },
+        ),
+        _groupHeaderTile('Some basic layouts'),
+        _SelectableTile(
+          title: 'Grid View',
+          color: Colors.amber,
+          onTap: () {},
+        ),
+        _SelectableTile(
+          title: 'Stack',
+          color: Colors.brown,
+          onTap: () {},
+        ),
+        _SelectableTile(
+          title: 'Responsive',
+          color: Colors.blue,
+          onTap: () {},
+        ),
+      ],
     );
   }
 
@@ -53,6 +56,7 @@ class MainListView extends StatelessWidget {
       title: Text(
         title,
         style: TextStyle(fontSize: 20),
+        textAlign: TextAlign.center,
       ),
       enabled: false);
 
@@ -68,20 +72,33 @@ class MainListView extends StatelessWidget {
 }
 
 class _SelectableTile extends StatelessWidget {
-  _SelectableTile({Key key, this.title, this.onTap}) : super(key: key);
-
   final Function onTap;
   final String title;
+  final Color color;
+
+  _SelectableTile({Key key, this.title, this.onTap, this.color})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        title ?? 'Title',
-        style: TextStyle(fontSize: 20),
-      ),
-      onTap: onTap ?? null,
-      selected: false,
-    );
+    return Container(
+        padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
+        height: 120,
+        child: Card(
+            color: color,
+            elevation: 3,
+            child: InkWell(
+                onTap: onTap,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      title ?? 'Title',
+                      style: TextStyle(fontSize: 20),
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                    ),
+                  ],
+                ))));
   }
 }
