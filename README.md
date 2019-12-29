@@ -5,6 +5,9 @@ MaNa & Co AB
 
 A new Flutter project to show fundmental functionalities of the Flutter platform.
 
+<img src="Flutter-Demo-App.gif" height="500">
+
+
 ## The features included in this project
 
 This project includes the features below:
