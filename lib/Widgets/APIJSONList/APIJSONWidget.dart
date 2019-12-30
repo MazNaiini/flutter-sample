@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
-final _jsonURL = 'https://www.ma-na.co/entities_project/entities.json';
+import 'package:flutter_sample/Models/Entity.dart';
+import 'package:flutter_sample/Widgets/LocalJSONList/EntityListView.dart';
+import 'package:flutter_sample/Services/EnitiesAPI.dart';
 
 class APIJSONWidget extends StatelessWidget {
   final String title;
@@ -11,7 +12,28 @@ class APIJSONWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(this.title)),
-      body: Text('The list here'),
+      body: _APIJSONListView(),
     );
+  }
+}
+
+class _APIJSONListView extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _APIJSONListViewState();
+}
+
+class _APIJSONListViewState extends State {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+        future: EntitiesAPI.fetchEntities(),
+        builder: (context, snapshot) {
+          List<Entity> parsedEntities = Entity.parsedEntities(snapshot.data);
+          return parsedEntities.isEmpty
+              ? Center(child: CircularProgressIndicator())
+              : EntityListView(
+                  entities: parsedEntities,
+                );
+        });
   }
 }

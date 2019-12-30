@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:http/http.dart' as http;
 
 class HTTPService {
@@ -7,14 +8,22 @@ class HTTPService {
 
   Future fetchData() async {
     print('Fetching data from: $url');
+    try {
+      final response = await http.get(url);
+      return _bodyForResponse(response);
+    } on SocketException {
+      // TODO: Implement the case where there is a problem with the socket
+      print('Handle socket error');
+    }
+  }
 
-    http.Response response = await http.get(url);
-
-    if (response.statusCode == 200) {
-      return response.body;
-    } else {
-      // Todo: implement error handling
-      print('Error fetching data from $url ');
+  String _bodyForResponse(http.Response response) {
+    switch (response.statusCode) {
+      case 200:
+        return response.body;
+      default:
+        // TODO: implement more satus codes handling such as 400s and 500s
+        print('Handle other response statuses');
     }
   }
 }
