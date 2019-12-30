@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+final _jsonURL = 'https://www.ma-na.co/entities_project/entities.json';
+
 class APIJSONWidget extends StatelessWidget {
   final String title;
 
