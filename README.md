@@ -2,7 +2,7 @@
 
 <img src="/assets/images/logo.png" height="200">
 
-A new Flutter project to show fundmental functionalities of the Flutter platform.
+A Flutter project to show fundmental functionalities of the Flutter platform.
 
 <img src="Flutter-Demo-App.gif" height="500">
 
