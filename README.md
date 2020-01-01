@@ -13,10 +13,10 @@ A Flutter project to show fundmental functionalities of the Flutter platform.
 
 - A List/Detail view with API fetched JSON data. For each item we present a detail view.
 
-- Basic layout concepts and stateless widgets
-- Fullscreen navigtion push
-- Static List
-- Building a custom widget
+[comment]: <> (- Basic layout concepts and stateless widgets)
+[comment]: <> (- Fullscreen navigtion push)
+[comment]: <> (- Static List)
+[comment]: <> (- Building a custom widget)
 
 [Contact us](https://www.linkedin.com/in/dr-maz-naiini-96aa072/) for your app development needs at MaNa & Co:
 

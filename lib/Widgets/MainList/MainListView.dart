@@ -32,22 +32,22 @@ class MainListView extends StatelessWidget {
                 context);
           },
         ),
-        _groupHeaderTile('Some basic layouts'),
-        _SelectableTile(
-          title: 'Grid View',
-          color: Colors.amber,
-          onTap: () {},
-        ),
-        _SelectableTile(
-          title: 'Stack',
-          color: Colors.brown,
-          onTap: () {},
-        ),
-        _SelectableTile(
-          title: 'Responsive',
-          color: Colors.indigoAccent,
-          onTap: () {},
-        ),
+        // _groupHeaderTile('Some basic layouts'),
+        // _SelectableTile(
+        //   title: 'Grid View',
+        //   color: Colors.amber,
+        //   onTap: () {},
+        // ),
+        // _SelectableTile(
+        //   title: 'Stack',
+        //   color: Colors.brown,
+        //   onTap: () {},
+        // ),
+        // _SelectableTile(
+        //   title: 'Responsive',
+        //   color: Colors.indigoAccent,
+        //   onTap: () {},
+        // ),
       ],
     );
   }
@@ -83,7 +83,7 @@ class _SelectableTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
-        height: 120,
+        height: 200,
         child: Card(
             color: color,
             elevation: 3,
